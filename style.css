@@ -1,0 +1,106 @@
+body {
+  background-image: url("./images/bg-pattern.svg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  text-align: center;
+}
+header {
+  background-image: url("./images/pattern-circles.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 50px 0;
+}
+.container {
+}
+.card {
+  background-color: #fff;
+  padding: 30px;
+  margin: 20px 5% 0 5%;
+  box-shadow: 0px 2px 3px 2px #eee;
+}
+.card-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-check {
+  height: 10px;
+  padding: 0 10px;
+}
+.start {
+  background-color: hsl(227, 35%, 25%);
+  color: hsl(226, 100%, 87%);
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  padding: 10px 40px;
+  cursor: pointer;
+}
+
+/* Custom slider */
+.slider {
+  position: relative;
+  grid-area: 2 / 1 / 3 / -1;
+  padding: 0 3rem;
+  width: 100%;
+}
+
+.slider__range {
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  outline: none;
+  background-color: transparent;
+}
+
+.slider__range:focus {
+  outline: none;
+}
+
+.bar {
+  position: absolute;
+  z-index: 1;
+  left: 50px;
+  top: 7px;
+  width: 80%;
+  height: 10px;
+  border-radius: 5px;
+  background-color: hsl(224, 65%, 95%);
+  overflow: hidden;
+}
+
+.fill {
+  display: block;
+  width: 0;
+  height: 100%;
+  background-color: hsl(174, 77%, 80%);
+}
+
+.slider__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: -webkit-grab;
+  cursor: grab;
+  background: hsl(174, 86%, 45%) url("./images/icon-slider.svg") no-repeat
+    center;
+  box-shadow: 0 1rem 3rem hsl(174, 86%, 45%);
+  transition: 0.3s ease-in-out;
+}
+
+.slider__range::-moz-range-thumb {
+  outline: none;
+  border: none;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  cursor: grab;
+  background: hsl(174, 86%, 45%) url("./images/icon-slider.svg") no-repeat
+    center;
+  box-shadow: 0 1rem 3rem hsl(174, 86%, 45%);
+}
