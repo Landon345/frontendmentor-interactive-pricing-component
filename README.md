@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution on FrontendMentor](https://www.frontendmentor.io/solutions/interactive-pricing-component-CrhwhSyPK)
+- Live Site URL: [Github Pages Link](https://landon345.github.io/frontendmentor-interactive-pricing-component/)
 
 ## My process
 

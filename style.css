@@ -6,6 +6,7 @@ body {
   background-position: top left;
   background-size: 100% 60%;
   text-align: center;
+  background-color: hsl(230, 100%, 99%);
   font-family: "Manrope", sans-serif;
   color: hsl(227, 35%, 25%);
 }
@@ -31,6 +32,7 @@ header {
 p {
   color: hsl(225, 20%, 60%);
   font-size: 15px;
+  margin: 10px 5px;
 }
 hr {
   border: 1px solid #eee;
@@ -97,6 +99,10 @@ hr {
 }
 
 @media screen and (min-width: 800px) {
+  .para-row {
+    display: flex;
+    justify-content: center;
+  }
   .card {
     max-width: 720px;
     margin: auto;
@@ -117,6 +123,7 @@ hr {
   .billing-row {
     margin: auto;
     width: 60%;
+    padding-bottom: 20px;
     justify-content: space-around;
   }
   .discount-word::before {
