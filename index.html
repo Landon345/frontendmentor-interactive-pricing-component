@@ -12,17 +12,12 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./sliders.css">
     <title>Frontend Mentor | Interactive pricing component</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
+    
     </style>
   </head>
   <body>
@@ -34,64 +29,69 @@
         <p>No credit card required.</p>
       </header>
       <div class="card">
+        <div class="slider-container">
         <p class="pageviews"><span id="number-views">0</span> Pageviews</p>
         
+
+          
+          <form class="slider" autocomplete="off">
+            <label for="rangeSlider"></label>
+            <div class="bar"><span class="fill js-fill"></span></div>
+            <input
+            type="range"
+            min="0"
+            max="100"
+            value="50"
+            step="25"
+            name="PriceSelected"
+            class="slider__range js-slider"
+            id="rangeSlider"
+            />
+          </form>
         
-        <form class="slider" autocomplete="off">
-          <label for="rangeSlider"></label>
-          <div class="bar"><span class="fill js-fill"></span></div>
-          <input
-          type="range"
-          min="20"
-          max="100"
-          value="60"
-          step="20"
-          name="PriceSelected"
-          class="slider__range js-slider"
-          id="rangeSlider"
-          />
-          <p class="para-per-month"><span class="per-month">$16.00</span>/ month</p>
-          <div class="billing-row">
-            <p class="monthly-billing">Monthly Billing</p>
-            <input type="radio" name="radio" id="radio" />
-            <p class="yearly-billing">Yearly Billing</p>
-            <span class="percentage">-25%</span>
-          </div>
-        </form>
+        <div class="pricing-row">
+          
+          <span class="per-month">$16.00</span><p class="para-per-month">/ month</p>
+        </div>
+      </div>
+        <div class="billing-row">
+          <p class="monthly-billing">Monthly Billing</p>
+          <label for="monthly" class="switch">
+            <input type="checkbox" name="monthly" id="monthly" class=""/>
+            <span class="slider-switch round"></span>
+          </label>
+          <p class="yearly-billing">Yearly Billing</p>
+          <span class="percentage">-25% <span class="discount-word"></span></span>
+        </div>
         <hr />
-        <div class="card-row">
-          <img src="./images/icon-check.svg" alt="icon" class="icon-check" />
-          <p class="bottom-para">Unlimited websites</p>
+        <div class="desktop-container">
+          <div class="checkmarks">
+
+            <div class="card-row">
+              <img src="./images/icon-check.svg" alt="icon" class="icon-check" />
+              <p class="bottom-para">Unlimited websites</p>
+            </div>
+            <div class="card-row">
+              <img src="./images/icon-check.svg" alt="icon" class="icon-check" />
+              <p class="bottom-para">100% data ownership</p>
+            </div>
+            <div class="card-row">
+              <img src="./images/icon-check.svg" alt="icon" class="icon-check" />
+              <p class="bottom-para">Email reports</p>
+            </div>
+          </div>
+          <button class="start">Start my trial</button>
         </div>
-        <div class="card-row">
-          <img src="./images/icon-check.svg" alt="icon" class="icon-check" />
-          <p class="bottom-para">100% data ownership</p>
-        </div>
-        <div class="card-row">
-          <img src="./images/icon-check.svg" alt="icon" class="icon-check" />
-          <p class="bottom-para">Email reports</p>
-        </div>
-        <button class="start">Start my trial</button>
         
         <div class="attribution">
           Challenge by
           <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
-          >. Coded by <a href="#">Your Name Here</a>.
+          >. Coded by <a href="https://github.com/Landon345">Landon Schlangen</a>.
         </div>
 </div>
   </body>
-        <script>
-      const slider = document.querySelector(".js-slider");
-      const btn = document.querySelector(".js-btn");
-      const toggle = document.querySelector(".js-toggle");
-
-      // Making slider work
-      function setBar(value) {
-        const fill = document.querySelector(".js-fill");
-        fill.style.width = `${value}%`;
-      }
-      setBar(50);
+    <script type="text/javascript" src="./index.js">
     </script>
   </html>
   

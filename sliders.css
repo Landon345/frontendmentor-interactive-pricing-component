@@ -1,0 +1,125 @@
+/* Custom slider */
+
+.slider {
+  position: relative;
+  margin: auto;
+  grid-area: 2 / 1 / 3 / -1;
+  width: 80%;
+}
+
+.slider__range {
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  outline: none;
+  background-color: transparent;
+}
+
+.slider__range:focus {
+  outline: none;
+}
+
+.bar {
+  position: absolute;
+  z-index: 1;
+  /* left: 50px; */
+  top: 7px;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background-color: hsl(224, 65%, 95%);
+  overflow: hidden;
+}
+
+.fill {
+  display: block;
+  width: 0;
+  height: 100%;
+  background-color: hsl(174, 77%, 80%);
+}
+
+.slider__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: -webkit-grab;
+  cursor: grab;
+  background: hsl(174, 86%, 45%) url("./images/icon-slider.svg") no-repeat
+    center;
+  box-shadow: 0 1rem 3rem hsl(174, 86%, 45%);
+  transition: 0.3s ease-in-out;
+}
+
+.slider__range::-moz-range-thumb {
+  outline: none;
+  border: none;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  cursor: grab;
+  background: hsl(174, 86%, 45%) url("./images/icon-slider.svg") no-repeat
+    center;
+  box-shadow: 0 1rem 3rem hsl(174, 86%, 45%);
+}
+
+/* switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider-switch {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(223, 50%, 87%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider-switch:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 5px;
+  bottom: 3px;
+  background-color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider-switch {
+  background-color: hsl(174, 86%, 45%);
+}
+
+input:checked + .slider-switch:before {
+  -webkit-transform: translateX(22px);
+  -ms-transform: translateX(22px);
+  transform: translateX(22px);
+}
+
+/* Rounded slider-switchs */
+.slider-switch.round {
+  border-radius: 34px;
+}
+
+.slider-switch.round:before {
+  border-radius: 50%;
+}
